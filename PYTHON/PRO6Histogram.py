@@ -2,7 +2,7 @@ def histogram(values):
     for value in values:
         print('*' * value)
 
-numbers = input()
+numbers = input("Enter Numbers(Space Saperated): ")
 numbers = [int(x) for x in numbers.split()]
 histogram(numbers)
 
