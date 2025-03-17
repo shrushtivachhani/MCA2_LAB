@@ -21,10 +21,6 @@ while True:
     # Receive the response from the server
     data = client_socket.recv(1024).decode()
     print('Received from server : {}'.format(data))
-    #Close the connection when data is bye
-    if data == 'bye':
-        client_socket.close()
-        break
 
 #close the connection when send bye
 print('Closing Connection')

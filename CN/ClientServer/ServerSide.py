@@ -29,7 +29,6 @@ while True:
     response = input('Enter a response : ')
     client_socket.sendall(response.encode())
     
-#Close the connection when client send bye
-if data == 'bye':
-    client_socket.close()
-    print('Closing Connection')
+#Close the connection
+print('Closing Connection')
+client_socket.close()

@@ -1,0 +1,11 @@
+index,name,score,attempts,qualify
+1,a,12.5,1,yes
+2,b,9,3,no
+3,c,16.5,2,yes
+4,d,,3,no
+5,e,9,2,no
+6,f,20,3,yes
+7,g,14.5,1,yes
+8,h,,1,no
+9,i,8,2,no
+10,j,19,1,yes
