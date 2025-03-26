@@ -1,0 +1,18 @@
+<html>
+    <script>
+        function doSum(){
+            a = document.getElementById("txt1").value
+            b = document.getElementById("txt2").value
+            c = parseInt(a) + parseInt(b)
+            console.log(c)
+            document.getElementById("ans").innerHTML="Sum is : "+c 
+        }
+    </script>
+    <body>
+        No1:<input type="text" id="txt1">
+        No2:<input type="text" id="txt2">
+
+        <input type="button" value="sum" onclick="doSum()"/>
+        <p id="ans"></p>
+    </body>
+</html>

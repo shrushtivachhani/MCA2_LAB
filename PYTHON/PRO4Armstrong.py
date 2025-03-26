@@ -1,5 +1,5 @@
 num = []
-for i in range(3):
+for i in range(10):
     number = int(input("Enter a value :"))
     num.append(number)
     
