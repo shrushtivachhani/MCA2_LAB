@@ -1,8 +1,17 @@
+import AboutUsFun from "./Component/AboutUsFun";
+import FooterFun from "./Component/FooterFun";
+import HeaderFun from "./Component/HeaderFun";
+import HomeClass from "./Component/HomeClass";
 
 
 function App() {
   return (
-    <h1>Hello React App</h1>
+    <>
+      {HeaderFun()}
+      <HomeClass/>
+      {AboutUsFun()}
+      {FooterFun()}
+    </>
   );
 }
 

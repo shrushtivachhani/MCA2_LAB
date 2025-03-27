@@ -1,0 +1,56 @@
+<html>
+<script>
+    function saveData() {
+        var name = document.getElementById("name").value;
+        localStorage.setItem("name", "name")
+        sessionStorage.setItem("name", "name")
+        document.getElementById("myid").innerHTML = "Saved"
+    }
+
+    function getData() {
+        if (localStorage.getItem("name") != null) {
+            var a = localStorage.getItem("name")
+            document.getElementById("myid").innerHTML = "Data is" + a
+        } else {
+            document.getElementById("myid").innerHTML = "No Data"
+        }
+    }
+
+    function removeData() {
+        localStorage.removeItem("name")
+        document.getElementById("myid").innerHTML = "Removed"
+    }
+
+    function objectSave() {
+        var myobject = {
+            name: "SV",
+            gender: "Female",
+            mobile: 9722968778,
+            address: "Rajkot"
+        }
+        mydata = JSON.stringify(myobject)
+        localStorage.setItem("userdata", mydata)
+    }
+
+    function objectGet() {
+        if (localStorage.getItem("userdata") != null){
+            var a = localStorage.getItem("userdata")
+            var myobject = JSON.parse(a)
+            document.getElementById("myid").innerHTML = "Data is: " + myobject.name + myobject.mobile + myobject.address
+        } else {
+            document.getElementById("myid").innerHTML = "No Data"
+        } 
+    }
+</script>
+
+<body>
+    <p id="myid"></p>
+    <input type="text" id="name"/>
+    <input type="button" value="Save" onclick="saveData()"/>
+    <input type="button" value="Get" onclick="getData()"/>
+    <input type="button" value="Remove" onclick="removeData()"/>
+    <input type="button" value="ObjSave" onclick="objectSave()"/>
+    <input type="button" value="ObjGet" onclick="objectGet()"/>
+</body>
+
+</html>
