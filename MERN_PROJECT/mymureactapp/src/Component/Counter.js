@@ -4,13 +4,19 @@ class Counter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
+        count: Number(localStorage.getItem("count")) || 0,
     };
   }
 
-  increment = () => {
+  updateLocalStorage = (newCount) => {
+    localStorage.setItem("count", newCount);
+  };
+
+   increment = () => {
     if (this.state.count < 5) {
-      this.setState({ count: this.state.count + 1 });
+      const newCount = this.state.count + 1;
+      this.setState({ count: newCount });
+      this.updateLocalStorage(newCount);
     } else {
       alert("Maximum count reached!");
     }
@@ -18,12 +24,13 @@ class Counter extends Component {
 
   decrement = () => {
     if (this.state.count > 0) {
-      this.setState({ count: this.state.count - 1 });
+      const newCount = this.state.count - 1;
+      this.setState({ count: newCount });
+      this.updateLocalStorage(newCount);
     } else {
       alert("Minimum count reached!");
     }
   };
-
   render() {
     return (
       <div>
